@@ -10,7 +10,6 @@ export default function TodoList() {
       {todos.map((p, i) => (
        <div key={p.id}>
           <ToDo {...p} />
-
           <br />
       ))}
     </div>
