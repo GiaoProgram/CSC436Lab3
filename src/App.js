@@ -1,39 +1,29 @@
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
+import TodoList from "./components/TodoList";
 import UserBar from "./user/UserBar";
-import ToDoList from "./post/ToDoList";
-import CreateToDo from "./post/CreateToDo";
 import appReducer from "./reducers";
-import { v4 as uuidv4 } from "uuid";
-
+import { StateContext } from "./contexts";
+import CreateTodo from "./components/CreateTodo";
+import { useResource } from "react-request-hook";
+import UserBar from "./user/UserBar";
 function App() {
-  const initialPosts = [
-    {
-      title: "Test1",
-      content: "test1，test1，test1",
-      author: "Fan",
-      id: uuidv4(),
-    },
-    {
-      title: "test2",
-      content: "test2，test2，test2",
-      author: "Fan",
-      id: uuidv4(),
-    },
-  ];
-
-  const [state, dispatch] = useReducer(appReducer, {
-    user: "",
-    posts: initialPosts,
+    secondaryColor: "coral",
   });
+
+  const [todos, getTodos] = useResource(() => ({
+    url: "/posts",
+    method: "get",
+  }));
+
+  useEffect(getTodos, []);
+
+
+  useEffect(() => {
+    if (todots && posts.data) {
+      dispatch({ type: "FETCH_TODOTS", todos: todos.data });
+    }
+  }, [todots]);
 
   return (
     <div>
-      <UserBar user={state.user} dispatch={dispatch}  />
-      <ToDoList posts={state.posts} dispatch={dispatch} />
-      {state.user && <CreatePost user={state.user} posts={state.posts} dispatch={dispatch}/>}
-
-    </div>
-  );
-}
-
-export default App;
+      <StateContext.Provider value={{ state, dispatch }}></StateContext.Provider>
