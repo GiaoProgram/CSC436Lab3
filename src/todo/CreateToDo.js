@@ -26,6 +26,16 @@ export default function CreateToDo({ user, todos, dispatch}) {
           id: uuidv4(),
           time:Date(Date.now()),
         });
+     dispatch({
+          type: "CREATE_TODO",
+          id: temp_id,
+          title,
+          description,
+          author: user,
+          dateCreated: d,
+          complete: false,
+        });
+      setUid(uuidv4());
       }}
     >
       <br />
