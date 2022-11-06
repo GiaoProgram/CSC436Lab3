@@ -17,3 +17,4 @@ root.render(
     </RequestProvider>
   </React.StrictMode>
 );
+reportWebVitals();
