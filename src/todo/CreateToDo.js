@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { StateContext } from "../contexts";
 export default function CreateToDo({ user, todos, dispatch}) {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+ const [title, setTitle] = useState("");
+ const [content, setContent] = useState("");
 
   
-  const [post, createTodo] = useResource(
+ const [post, createTodo] = useResource(
     ({ title, description, author, id, dateCreated, complete }) => ({
       url: "/todos",
       method: "post",
