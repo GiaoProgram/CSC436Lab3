@@ -4,6 +4,15 @@ export default function CreateToDo({ user, todos, dispatch}) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
+  
+  const [post, createTodo] = useResource(
+    ({ title, description, author, id, dateCreated, complete }) => ({
+      url: "/todos",
+      method: "post",
+      data: { title, description, author, id, dateCreated, complete },
+    })
+  );
+  
   return (
     <form
       onSubmit={(e) => {
