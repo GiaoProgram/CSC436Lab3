@@ -1,7 +1,6 @@
 export default function ThemeItem({ theme, active, onClick }) {
     return (
-      <span
-        onClick={onClick}
+      <span onClick={onClick}
         style={{
           cursor: "pointer",
           paddingLeft: 8,
