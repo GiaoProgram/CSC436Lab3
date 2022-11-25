@@ -1,0 +1,66 @@
+{
+  "todos": [
+    {
+      "id": "0f67da15-30e6-41b6-be1b-a767ace319c3",
+      "title": "To Do 1",
+      "description": "Test 1",
+      "author": "test@test.test",
+      "dateCreated": "10/30/2022, 1:17:10 PM",
+      "complete": true,
+      "dateCompleted": "10/30/2022, 2:14:58 PM"
+    },
+    {
+      "id": "401088eb-25b4-4001-8724-3225088d4611",
+      "title": "To Do 2",
+      "description": "Do this other thing",
+      "author": "alen@test.test",
+      "dateCreated": "10/30/2022, 2:14:23 PM",
+      "complete": true,
+      "dateCompleted": "10/30/2022, 2:15:27 PM"
+    },
+    {
+      "title": "New Test 2",
+      "description": "Testing 2",
+      "author": "kevin@test.test",
+      "dateCreated": "11/5/2022, 12:36:37 PM",
+      "complete": true,
+      "dateCompleted": "11/5/2022, 12:37:49 PM",
+      "id": "WIjAB3F"
+    },
+    {
+      "title": "New Test 1 (copy)",
+      "description": "Testing 1",
+      "author": "kevin@test.test",
+      "dateCreated": "11/5/2022, 12:37:33 PM",
+      "complete": false,
+      "dateCompleted": "",
+      "id": "FFvn98B"
+    },
+    {
+      "title": "Jack's First Todo",
+      "description": "Do This Bob",
+      "author": "jack@test.test",
+      "dateCreated": "11/5/2022, 12:40:47 PM",
+      "complete": false,
+      "dateCompleted": "",
+      "id": "rCfQh5M"
+    }
+  ],
+  "users": [
+    {
+      "email": "alen@test.test",
+      "password": "$2a$10$IOPd1l8WMx19/4XZSZ.6I.Q/qPLOOljVrnsF9ntaE9y8x1Iu3bXdm",
+      "id": 1
+    },
+    {
+      "email": "kevin@test.test",
+      "password": "$2a$10$0j7kGKYDowd7E7qK4lCIVeS/EGzDtipsyAlYNGnG9Do5wbigqJQ4O",
+      "id": 2
+    },
+    {
+      "email": "jack@test.test",
+      "password": "$2a$10$87U50Emvw1OkgQBqHYM9dOYyIwEkCXyun3kTaI7YgV1qVQqwhrp36",
+      "id": 3
+    }
+  ]
+}
